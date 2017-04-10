@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bvb-nl-8e9" customClass="UserProfileView" customModule="TwitterClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TdS-YO-L7I">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                    <color key="backgroundColor" red="0.2902910474" green="0.74373904570000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TdS-YO-L7I" secondAttribute="height" multiplier="3:1" id="sdc-np-jMf"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aaz-Zn-dQp" customClass="GradientView" customModule="TwitterClient" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="58.5" width="375" height="66.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyQ-Dc-vO1">
+                    <rect key="frame" x="12" y="58.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="aQ6-6Y-RFM"/>
+                        <constraint firstAttribute="height" constant="40" id="iT7-fx-5Pl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScreenName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDG-ef-kmq">
+                    <rect key="frame" x="12" y="102.5" width="77" height="14.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ugz-Cn-5JN">
+                    <rect key="frame" x="12" y="137" width="351" height="51"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j75-Tz-EHP">
+                    <rect key="frame" x="97" y="105" width="26.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TdS-YO-L7I" firstAttribute="leading" secondItem="Bvb-nl-8e9" secondAttribute="leading" id="32o-eW-DBG"/>
+                <constraint firstAttribute="trailing" secondItem="TdS-YO-L7I" secondAttribute="trailing" id="6Du-ad-VGw"/>
+                <constraint firstItem="oDG-ef-kmq" firstAttribute="bottom" secondItem="TdS-YO-L7I" secondAttribute="bottom" constant="-8" id="6Ha-p4-qwC"/>
+                <constraint firstItem="j75-Tz-EHP" firstAttribute="baseline" secondItem="oDG-ef-kmq" secondAttribute="baseline" id="EPm-aJ-3F4"/>
+                <constraint firstItem="Aaz-Zn-dQp" firstAttribute="bottom" secondItem="TdS-YO-L7I" secondAttribute="bottom" id="F7V-up-prI"/>
+                <constraint firstItem="oDG-ef-kmq" firstAttribute="top" secondItem="ZyQ-Dc-vO1" secondAttribute="bottom" constant="4" id="Ig8-xW-49n"/>
+                <constraint firstItem="oDG-ef-kmq" firstAttribute="leading" secondItem="ugz-Cn-5JN" secondAttribute="leading" id="NcF-vx-mJr"/>
+                <constraint firstItem="ugz-Cn-5JN" firstAttribute="leading" secondItem="Bvb-nl-8e9" secondAttribute="leading" constant="12" id="ZDe-OS-tKn"/>
+                <constraint firstAttribute="trailing" secondItem="ugz-Cn-5JN" secondAttribute="trailing" constant="12" id="a6w-Zb-dD6"/>
+                <constraint firstItem="j75-Tz-EHP" firstAttribute="leading" secondItem="oDG-ef-kmq" secondAttribute="trailing" constant="8" id="bVf-kb-fCt"/>
+                <constraint firstItem="ugz-Cn-5JN" firstAttribute="top" secondItem="Aaz-Zn-dQp" secondAttribute="bottom" constant="12" id="elP-Xp-uYd"/>
+                <constraint firstItem="Aaz-Zn-dQp" firstAttribute="width" secondItem="TdS-YO-L7I" secondAttribute="width" id="j2h-BJ-qLQ"/>
+                <constraint firstAttribute="bottom" secondItem="ugz-Cn-5JN" secondAttribute="bottom" constant="12" id="jhm-CM-3OL"/>
+                <constraint firstItem="Aaz-Zn-dQp" firstAttribute="top" secondItem="ZyQ-Dc-vO1" secondAttribute="top" id="oOM-g7-14d"/>
+                <constraint firstItem="ZyQ-Dc-vO1" firstAttribute="leading" secondItem="oDG-ef-kmq" secondAttribute="leading" id="pdU-l0-Xfh"/>
+                <constraint firstItem="Aaz-Zn-dQp" firstAttribute="leading" secondItem="TdS-YO-L7I" secondAttribute="leading" id="sLi-KG-IvY"/>
+                <constraint firstItem="TdS-YO-L7I" firstAttribute="top" secondItem="Bvb-nl-8e9" secondAttribute="top" id="z1z-0W-esq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descriptionView" destination="ugz-Cn-5JN" id="Jp9-DH-hBJ"/>
+                <outlet property="nameLabel" destination="j75-Tz-EHP" id="Z0E-Jk-8sz"/>
+                <outlet property="profileBackgroundImageView" destination="TdS-YO-L7I" id="xT4-sk-lM6"/>
+                <outlet property="profileImageView" destination="ZyQ-Dc-vO1" id="LGI-D1-OB1"/>
+                <outlet property="screenNameLabel" destination="oDG-ef-kmq" id="xOU-tG-qgB"/>
+            </connections>
+            <point key="canvasLocation" x="22.5" y="-139.5"/>
+        </view>
+    </objects>
+</document>

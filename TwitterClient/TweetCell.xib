@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" id="8pX-Bq-k0v" customClass="TweetCell" customModule="TwitterClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8pX-Bq-k0v" id="1kA-7E-XZ3">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bX4-aj-dNf">
+                        <rect key="frame" x="16" y="16" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Z4Z-tt-EUb"/>
+                            <constraint firstAttribute="height" constant="50" id="ps1-hW-bZd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="screen name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-eL-FLW">
+                        <rect key="frame" x="74" y="16" width="105" height="19"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY3-MX-99L">
+                        <rect key="frame" x="187" y="16" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5Q-Om-6zp">
+                        <rect key="frame" x="74" y="47" width="277" height="40.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="T5Q-Om-6zp" secondAttribute="bottom" constant="16" id="19x-oA-b89"/>
+                    <constraint firstItem="bX4-aj-dNf" firstAttribute="leading" secondItem="1kA-7E-XZ3" secondAttribute="leading" constant="16" id="67P-mc-rdd"/>
+                    <constraint firstItem="mY3-MX-99L" firstAttribute="baseline" secondItem="WVJ-eL-FLW" secondAttribute="baseline" id="9lu-uF-Q2b"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="T5Q-Om-6zp" secondAttribute="trailing" constant="16" id="BCU-JE-hCf"/>
+                    <constraint firstItem="WVJ-eL-FLW" firstAttribute="leading" secondItem="bX4-aj-dNf" secondAttribute="trailing" constant="8" id="KI7-HA-bQb"/>
+                    <constraint firstItem="T5Q-Om-6zp" firstAttribute="leading" secondItem="WVJ-eL-FLW" secondAttribute="leading" id="Yxj-il-d6W"/>
+                    <constraint firstItem="mY3-MX-99L" firstAttribute="top" secondItem="WVJ-eL-FLW" secondAttribute="top" id="emc-mC-tXI"/>
+                    <constraint firstItem="mY3-MX-99L" firstAttribute="leading" secondItem="WVJ-eL-FLW" secondAttribute="trailing" constant="8" id="hME-eF-kHy"/>
+                    <constraint firstItem="T5Q-Om-6zp" firstAttribute="top" secondItem="WVJ-eL-FLW" secondAttribute="bottom" constant="12" id="iRO-8j-GiJ"/>
+                    <constraint firstItem="WVJ-eL-FLW" firstAttribute="top" secondItem="bX4-aj-dNf" secondAttribute="top" id="prr-so-YQn"/>
+                    <constraint firstItem="bX4-aj-dNf" firstAttribute="top" secondItem="1kA-7E-XZ3" secondAttribute="top" constant="16" id="zyN-cn-31c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="mY3-MX-99L" id="Rur-r4-cBE"/>
+                <outlet property="profileImageView" destination="bX4-aj-dNf" id="yUA-cC-gYa"/>
+                <outlet property="screenNameLabel" destination="WVJ-eL-FLW" id="z6u-HY-8lC"/>
+                <outlet property="tweetTextLabel" destination="T5Q-Om-6zp" id="xHs-z3-l8w"/>
+            </connections>
+            <point key="canvasLocation" x="-767.5" y="-1069"/>
+        </tableViewCell>
+    </objects>
+</document>

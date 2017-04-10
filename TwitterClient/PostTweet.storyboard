@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FX3-sd-Fxo">
+            <objects>
+                <navigationController storyboardIdentifier="PostTweetNavigation" id="on2-hd-bvM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yOU-UI-OmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.2902910474" green="0.74373904570000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gRU-VP-Uh3" kind="relationship" relationship="rootViewController" id="MaI-7B-ycC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoD-ax-BK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="-153"/>
+        </scene>
+        <!--いまどうしてる？-->
+        <scene sceneID="6X8-6A-FkG">
+            <objects>
+                <viewController id="gRU-VP-Uh3" customClass="PostTweetViewController" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g6x-ii-kxe"/>
+                        <viewControllerLayoutGuide type="bottom" id="cVs-rd-1A0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sd7-65-PEc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EF7-ED-ENf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EF7-ED-ENf" firstAttribute="leading" secondItem="sd7-65-PEc" secondAttribute="leading" id="Any-mV-j3h"/>
+                            <constraint firstAttribute="trailing" secondItem="EF7-ED-ENf" secondAttribute="trailing" id="owz-yr-JKa"/>
+                            <constraint firstItem="EF7-ED-ENf" firstAttribute="top" secondItem="g6x-ii-kxe" secondAttribute="bottom" id="qHo-j3-iGT"/>
+                            <constraint firstItem="cVs-rd-1A0" firstAttribute="top" secondItem="EF7-ED-ENf" secondAttribute="bottom" id="sje-0m-hqe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="いまどうしてる？" id="eVj-Hh-7Vh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zJu-Bk-TaT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="4a0-6V-D24"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButtonItem" destination="zJu-Bk-TaT" id="9Cd-aM-Uhc"/>
+                        <outlet property="postButtonItem" destination="4a0-6V-D24" id="fX5-Ev-By5"/>
+                        <outlet property="textView" destination="EF7-ED-ENf" id="B3h-xc-7Qj"/>
+                        <outlet property="textViewBottom" destination="sje-0m-hqe" id="AyN-us-2py"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFI-eh-Q1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="-153.37331334332833"/>
+        </scene>
+    </scenes>
+</document>

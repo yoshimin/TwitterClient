@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Timeline View Controller-->
+        <scene sceneID="cfD-VK-9WS">
+            <objects>
+                <viewController storyboardIdentifier="UserTimeline" id="gf9-jK-L7R" customClass="UserTimelineViewController" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qAW-ep-RiM"/>
+                        <viewControllerLayoutGuide type="bottom" id="xI9-rv-jMo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kyD-IP-Sln">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d9o-4B-bD2" customClass="TimelineView" customModule="TwitterClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" id="HGj-Q9-SgH">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGj-Q9-SgH" id="DDw-H1-Y7y">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d9o-4B-bD2" secondAttribute="trailing" id="CIx-gO-W6B"/>
+                            <constraint firstItem="xI9-rv-jMo" firstAttribute="top" secondItem="d9o-4B-bD2" secondAttribute="bottom" id="Is1-t0-meh"/>
+                            <constraint firstItem="d9o-4B-bD2" firstAttribute="leading" secondItem="kyD-IP-Sln" secondAttribute="leading" id="T3j-a6-ed8"/>
+                            <constraint firstItem="d9o-4B-bD2" firstAttribute="top" secondItem="kyD-IP-Sln" secondAttribute="top" id="l4R-Fz-AD5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="d9o-4B-bD2" id="fNm-Ou-b2y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9S-aw-6y9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="78.710644677661179"/>
+        </scene>
+    </scenes>
+</document>

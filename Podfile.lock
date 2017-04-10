@@ -1,0 +1,25 @@
+PODS:
+  - Himotoki (3.0.1)
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxSwift (3.3.1)
+  - SVProgressHUD (2.1.2)
+  - twitter-text (1.14.3)
+
+DEPENDENCIES:
+  - Himotoki (~> 3.0.0)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+  - SVProgressHUD (= 2.1.2)
+  - twitter-text (= 1.14.3)
+
+SPEC CHECKSUMS:
+  Himotoki: 85fda41d4d0e14f7228317a3b474175cdfb8f515
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  twitter-text: a1b7255d3f924dae6cbe4d9cf57be9c5430699ae
+
+PODFILE CHECKSUM: 2cce716c31db77acff5c20de95ad012bd7d8dd89
+
+COCOAPODS: 1.2.0
