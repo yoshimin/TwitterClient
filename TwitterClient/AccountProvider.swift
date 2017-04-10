@@ -77,36 +77,38 @@ final class AccountProvider: ErrorHandler {
             let accountType = accountStore.accountType(withAccountTypeIdentifier: ACAccountTypeIdentifierTwitter)
             
             accountStore.requestAccessToAccounts(with: accountType, options: nil) { (authorized, error) -> Void in
-                // アカウントの取得に失敗した場合
-                if error != nil {
-                    self.handle(AccountError.systemError)
+                DispatchQueue.main.sync {
+                    // アカウントの取得に失敗した場合
+                    if error != nil {
+                        self.handle(AccountError.systemError)
+                        
+                        observer.onNext([])
+                        observer.onCompleted()
+                        return
+                    }
                     
-                    observer.onNext([])
-                    observer.onCompleted()
-                    return
-                }
-                
-                // アクセス権がない場合
-                if (!authorized) {
-                    self.handle(AccountError.denied)
+                    // アクセス権がない場合
+                    if (!authorized) {
+                        self.handle(AccountError.denied)
+                        
+                        observer.onNext([])
+                        observer.onCompleted()
+                        return
+                    }
                     
-                    observer.onNext([])
-                    observer.onCompleted()
-                    return
-                }
-                
-                // アカウントが登録されていない場合
-                guard let storedAccounts = accountStore.accounts(with: accountType), storedAccounts.count > 0 else {
-                    self.handle(AccountError.noAccount)
+                    // アカウントが登録されていない場合
+                    guard let storedAccounts = accountStore.accounts(with: accountType), storedAccounts.count > 0 else {
+                        self.handle(AccountError.noAccount)
+                        
+                        observer.onNext([])
+                        observer.onCompleted()
+                        return
+                    }
                     
-                    observer.onNext([])
+                    // アカウントが取得できた場合
+                    observer.onNext(storedAccounts as! [ACAccount])
                     observer.onCompleted()
-                    return
                 }
-                
-                // アカウントが取得できた場合
-                observer.onNext(storedAccounts as! [ACAccount])
-                observer.onCompleted()
             }
             return Disposables.create()
         }
@@ -120,7 +122,7 @@ extension AccountProvider {
             return "アカウントの取得に失敗しました。\nホーム画面の設定アプリから、Twitterアカウントへのアクセスを許可してください。"
         case AccountError.noAccount:
             return "アカウントの取得に失敗しました。\nホーム画面の設定アプリから、Twitterアカウントを設定してください。"
-         default:
+        default:
             return "アカウントの取得に失敗しました。\nホーム画面の設定アプリから、Twitterアカウントを確認してもう一度お試しください。"
         }
     }
