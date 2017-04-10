@@ -105,10 +105,10 @@
 		4652BBA51E93651300E4D456 = {
 			isa = PBXGroup;
 			children = (
-				4652BBB01E93651300E4D456 /* TwitterClient */,
-				4652BBAF1E93651300E4D456 /* Products */,
-				9DC37CDA0C5E812DC14B4AD8 /* Pods */,
 				DAFE590878447DD24BBAB7E5 /* Frameworks */,
+				9DC37CDA0C5E812DC14B4AD8 /* Pods */,
+				4652BBAF1E93651300E4D456 /* Products */,
+				4652BBB01E93651300E4D456 /* TwitterClient */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,15 +123,15 @@
 		4652BBB01E93651300E4D456 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
-				46E6C4B71E9955940094BD29 /* timelineProvider */,
-				46E3680F1E9560A000EE68F5 /* views */,
-				46E3680C1E9559E800EE68F5 /* xibs */,
-				46E367FB1E94EE4F00EE68F5 /* viewmodels */,
 				46E367F11E94BB7B00EE68F5 /* api */,
-				46E367DD1E93D60400EE68F5 /* utilities */,
-				4652BBC61E93681600E4D456 /* viewControllers */,
 				4652BBC51E93680D00E4D456 /* models */,
 				4652BBC41E9367F000E4D456 /* storyboards */,
+				46E6C4B71E9955940094BD29 /* timelineProvider */,
+				46E367DD1E93D60400EE68F5 /* utilities */,
+				4652BBC61E93681600E4D456 /* viewControllers */,
+				46E367FB1E94EE4F00EE68F5 /* viewmodels */,
+				46E3680F1E9560A000EE68F5 /* views */,
+				46E3680C1E9559E800EE68F5 /* xibs */,
 				4652BBB11E93651300E4D456 /* AppDelegate.swift */,
 				4652BBB81E93651300E4D456 /* Assets.xcassets */,
 				4652BBBD1E93651300E4D456 /* Info.plist */,
@@ -142,12 +142,13 @@
 		4652BBC41E9367F000E4D456 /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				46E367D51E93CD2500EE68F5 /* UserTimeline.storyboard */,
 				4652BBB51E93651300E4D456 /* HomeTimeline.storyboard */,
 				4652BBBA1E93651300E4D456 /* LaunchScreen.storyboard */,
 				46E6C4CB1E9A64C30094BD29 /* PostTweet.storyboard */,
+				46E367D51E93CD2500EE68F5 /* UserTimeline.storyboard */,
 			);
 			name = storyboards;
+			path = storyboards;
 			sourceTree = "<group>";
 		};
 		4652BBC51E93680D00E4D456 /* models */ = {
@@ -157,27 +158,30 @@
 				4652BBC91E93689D00E4D456 /* User.swift */,
 			);
 			name = models;
+			path = models;
 			sourceTree = "<group>";
 		};
 		4652BBC61E93681600E4D456 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				4652BBCF1E93770F00E4D456 /* HomeTimelineViewController.swift */,
-				4652BBD11E93772200E4D456 /* UserTimelineViewController.swift */,
 				46E6C4CD1E9A67190094BD29 /* PostTweetViewController.swift */,
+				4652BBD11E93772200E4D456 /* UserTimelineViewController.swift */,
 			);
 			name = viewControllers;
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 		46E367DD1E93D60400EE68F5 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
-				46E367EA1E93E92400EE68F5 /* AccountProvider.swift */,
 				46E367EF1E940D5300EE68F5 /* AccountIdStore.swift */,
-				460EDFF11E96B96700AC8781 /* UIimage+Async.swift */,
+				46E367EA1E93E92400EE68F5 /* AccountProvider.swift */,
 				46E6C4C21E9A0CC10094BD29 /* ErrorHandler.swift */,
+				460EDFF11E96B96700AC8781 /* UIimage+Async.swift */,
 			);
 			name = utilities;
+			path = utilities;
 			sourceTree = "<group>";
 		};
 		46E367F11E94BB7B00EE68F5 /* api */ = {
@@ -186,22 +190,24 @@
 				46E367F21E94BC2700EE68F5 /* HomeTimelineAPIClient.swift */,
 				46E3680A1E9532F200EE68F5 /* HomeTimelineRequest.swift */,
 				46E368061E951AC600EE68F5 /* TwitterRequest.swift */,
-				46E367F41E94BC4900EE68F5 /* UserTimelineAPIClient.swift */,
-				460EDFED1E9685CA00AC8781 /* UserTimelineRequest.swift */,
 				46E6C4CF1E9A686A0094BD29 /* UpdateAPIClient.swift */,
 				46E6C4D11E9A68850094BD29 /* UpldateRequest.swift */,
+				46E367F41E94BC4900EE68F5 /* UserTimelineAPIClient.swift */,
+				460EDFED1E9685CA00AC8781 /* UserTimelineRequest.swift */,
 			);
 			name = api;
+			path = api;
 			sourceTree = "<group>";
 		};
 		46E367FB1E94EE4F00EE68F5 /* viewmodels */ = {
 			isa = PBXGroup;
 			children = (
 				46E367FC1E94EE6B00EE68F5 /* HomeTimelineViewModel.swift */,
-				460EDFEB1E9683B100AC8781 /* UserTimelineViewModel.swift */,
 				46E6C4D31E9A90120094BD29 /* PostTweetViewModel.swift */,
+				460EDFEB1E9683B100AC8781 /* UserTimelineViewModel.swift */,
 			);
 			name = viewmodels;
+			path = viewmodels;
 			sourceTree = "<group>";
 		};
 		46E3680C1E9559E800EE68F5 /* xibs */ = {
@@ -211,29 +217,32 @@
 				46E6C4C01E99D7100094BD29 /* UserProfileView.xib */,
 			);
 			name = xibs;
+			path = xibs;
 			sourceTree = "<group>";
 		};
 		46E3680F1E9560A000EE68F5 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				46E368101E9560B000EE68F5 /* TweetCell.swift */,
-				460EDFF51E972CDF00AC8781 /* UserProfileView.swift */,
 				461663031E978B9A008CA3CB /* GradientView.swift */,
 				46E6C4BA1E995B740094BD29 /* TimelineView.swift */,
+				46E368101E9560B000EE68F5 /* TweetCell.swift */,
+				460EDFF51E972CDF00AC8781 /* UserProfileView.swift */,
 			);
 			name = views;
+			path = views;
 			sourceTree = "<group>";
 		};
 		46E6C4B71E9955940094BD29 /* timelineProvider */ = {
 			isa = PBXGroup;
 			children = (
-				46E6C4AE1E9942A40094BD29 /* TimelineProvider.swift */,
-				46E6C4B01E9948620094BD29 /* TimelineLoader.swift */,
-				46E6C4B21E9948700094BD29 /* HomeTimelineLoader.swift */,
-				46E6C4B41E9955700094BD29 /* UserTimelineLoader.swift */,
 				46E6C4DE1E9BDAC20094BD29 /* BaseTimelineLoader.swift */,
+				46E6C4B21E9948700094BD29 /* HomeTimelineLoader.swift */,
+				46E6C4B01E9948620094BD29 /* TimelineLoader.swift */,
+				46E6C4AE1E9942A40094BD29 /* TimelineProvider.swift */,
+				46E6C4B41E9955700094BD29 /* UserTimelineLoader.swift */,
 			);
 			name = timelineProvider;
+			path = timelineProvider;
 			sourceTree = "<group>";
 		};
 		9DC37CDA0C5E812DC14B4AD8 /* Pods */ = {
@@ -422,6 +431,7 @@
 				4652BBB61E93651300E4D456 /* Base */,
 			);
 			name = HomeTimeline.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		4652BBBA1E93651300E4D456 /* LaunchScreen.storyboard */ = {
@@ -430,6 +440,7 @@
 				4652BBBB1E93651300E4D456 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		46E367D51E93CD2500EE68F5 /* UserTimeline.storyboard */ = {
@@ -438,6 +449,7 @@
 				46E367D61E93CD2500EE68F5 /* Base */,
 			);
 			name = UserTimeline.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
